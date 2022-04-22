@@ -1,2 +1,2 @@
 # WnCC-SoC-2022-QML
-Weekly Updates on the project.
+Weekly updates on the project.
