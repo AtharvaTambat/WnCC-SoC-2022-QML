@@ -4,3 +4,9 @@ _Quantum Bit_ (or _qubit_ in short) is analogous to the classical bit, which is 
 
 <img src="https://user-images.githubusercontent.com/95964330/164874629-662d2bef-87f2-4040-998a-5c9d68ef021c.png" width=20% height=50%>
 
+The linear combination may be written in terms of parameters as given below:
+![Linear combination](https://user-images.githubusercontent.com/95964330/164911312-21d86906-97e0-4f2c-af14-f1f528ef83e5.png)
+
+and can be represented on a sphere as shown (Bloch Sphere):
+
+
