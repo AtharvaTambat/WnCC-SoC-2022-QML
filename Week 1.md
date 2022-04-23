@@ -22,6 +22,29 @@ It has the property that upon measuring the value of the first qubit (which can 
 ## Quantum Computation
 ### Single Qubit Gates
 The only single bit gate one can think of in a classical system is the NOT gate - which convert _0_ state to _1_ state and vice-versa. An analogous quantum NOT gate also exists ( named the X gate) - along with an infinite number of other one qubit gates!!!
+One property of the single qubit gates, that I find worth mentioning is that they act _linearly_ (meaning, <img src="https://user-images.githubusercontent.com/95964330/164912453-df63f10d-4dec-4215-94f3-3732b38edf19.png" width=7% height=7%> will change to <img src="https://user-images.githubusercontent.com/95964330/164912455-e4c0c738-c414-4059-bbf2-531b29ce0a85.png" width=8% height=8%>) - non-linear behavious of operators can lead to paradoxes such as - time travel, faster-than-light-communication etc.
+
+Quantum Operators can be thought of as matrices acting on the vector ![image](https://user-images.githubusercontent.com/95964330/164912587-aabbca59-b3e1-4e88-8398-bf39489420c0.png). For example, the NOT operator can be thought of as the  matrix:
+
+![image](https://user-images.githubusercontent.com/95964330/164912638-f70b94a5-414b-4187-96b6-d88363e70f34.png). The operation of which can be seen as: ![image](https://user-images.githubusercontent.com/95964330/164912741-f88a8066-09cb-4ca6-8a89-b787ed49870a.png)
+
+
+Other similar qubit operators are:
+
+![image](https://user-images.githubusercontent.com/95964330/164912658-67ff1906-9302-4fd0-ad4c-58e36efc1059.png) - the Z gate
+
+![image](https://user-images.githubusercontent.com/95964330/164912666-d40c7ca7-e7fb-4559-aff2-acf71fea4742.png) - the _Hadamard gate_
+
+The following image summarises the action of some single-qubit operators:
+
+![image](https://user-images.githubusercontent.com/95964330/164912718-87d63d1e-2115-46ff-a5f8-9ea860a76961.png)
+
+
+
+
+
+
+
 
 
 
