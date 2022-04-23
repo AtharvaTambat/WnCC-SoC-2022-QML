@@ -17,6 +17,15 @@ Let us consider the case of two Qubits. The system can be expressed as a superpo
 
 <img src="https://user-images.githubusercontent.com/95964330/164911760-a353c3dd-6938-45c4-bf37-53ed46193dc2.png" width=10% height=10%>
 
+It has the property that upon measuring the value of the first qubit (which can be either 0 or 1 with the probability 1/2 for each outcome), the outcome of the second qubit is already determined. A strong correlation exists in a Bell state than could ever exist in a classical system.
+
+## Quantum Computation
+### Single Qubit Gates
+The only single bit gate one can think of in a classical system is the NOT gate - which convert _0_ state to _1_ state and vice-versa. An analogous quantum NOT gate also exists ( named the X gate) - along with an infinite number of other one qubit gates!!!
+
+
+
+
 
 
 
