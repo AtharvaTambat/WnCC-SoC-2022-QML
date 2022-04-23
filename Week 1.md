@@ -10,6 +10,11 @@ The linear combination may be written in terms of parameters as given below:
 
 and can be represented on a sphere as shown (Bloch Sphere):
 
+![Bloch Sphere](https://user-images.githubusercontent.com/95964330/164911401-18eaa4fc-23b2-4623-a6f0-2630dfee2f4b.png)
+
+## Multiple Qubits
+Let us consider the case of two Qubits. The system can be expressed as a superposition (linear combination) of 4 _computational basis states_ (in simple words 4 different possibilities that the system can "collapse" into).
+
 
 
 
