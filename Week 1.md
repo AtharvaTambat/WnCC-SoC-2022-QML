@@ -50,6 +50,35 @@ Just like in the glassical gates, the _NAND_ gate can be used to build _every_ o
 
 One important distinction between classical gates and qubit gates is that there is an irreversible loss of information when classical gates are used. For example - an output _0_ of the _AND_ gate can come from either of the following combinations - (0,1), (1,0), (0,0) - meaning, we cannot retrieve back the input by looking at the output. Surprisingly, qubit-gates, by their representation using _Unitary matrices_ (which are invertible), are also invertible - i.e. the input ca be uniquely determined by looking at the output.
 
+### Measurments in bases other than the computational bases
+Note that the states <img src="https://user-images.githubusercontent.com/95964330/164874781-7c8f5ff1-5a00-496c-8f3c-0c8a34f5fea6.png" width=2.2% height=2.2%> and <img src="https://user-images.githubusercontent.com/95964330/164912039-69f001dd-55f6-45e6-9c87-9f276af6081b.png" width=2.2% height=2.2%> are one of many possible choice of basis states.  It is possible to express a state as a linear comination of an arbitrary basis set ( say, <img src="https://user-images.githubusercontent.com/95964330/164992819-a5b7cf69-a5a1-4077-b1dc-1c10b1f423e9.png" width=2.2% height=2.2%> and <img src="https://user-images.githubusercontent.com/95964330/164992852-c824a9b3-a7a0-45f7-9060-91cbca562a1d.png" width=2.2% height=2.2%>). It would help if the  new basis set was orthonormal. In that case the square of the modulus of the coeffecient of each basis would be the probability of that set of outcomes of the set of qubits on measurement.
+
+### Quantum circuits
+A number of features of the quantum circuits, which differentiates it from the conventional circuits are:
+<ol>
+  <li> Quantum circuits do not allow loops/ feedback.</li>
+  <li> They do not allow FANIN - several wires being joined together and an bitwise _OR_ of the inputs being shown as output.</li>
+  <li> They do not allow FANOUT - several copies of a qubit being produced.</li>
+</ol>
+
+Two important elements of a uantum circuit are: 
+
+1. Controlled Gates - with one control bit (similar to that in CNOT gate) and n target qubits - represented by a Unitary matrix U. </li> ![image](https://user-images.githubusercontent.com/95964330/164993180-7653680e-7c97-4d86-aac4-7ac4bb871858.png)
+1. "Meter" for measurment of the quantum bit. </li> ![image](https://user-images.githubusercontent.com/95964330/164993191-713ae328-4c33-45ce-8788-6b28ec4c8963.png)
+
+### Qubit Copying - NOT ALLOWED!!!
+The _no-cloning_ theorem states that the qubits cannot be copied. A simple way of seeing this is that when a qubits is measured, _no information_ about the probability of the _other_ outcome (the extra hidden information in the qubit regarding the _other_ possibility than the one which is obtained) cannot be obtained. If somehow we _can_ copy the qubit.......there remains a possibility to retrieve the _"extra, hidden information"_, indicating that the qubit cannot have been copied in the first place. 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
