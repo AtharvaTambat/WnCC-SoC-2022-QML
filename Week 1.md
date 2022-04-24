@@ -46,7 +46,7 @@ The prototypical multi-qubit logic gate is the _controlled_-NOT or _CNOT_ gate -
 
 <img src="https://user-images.githubusercontent.com/95964330/164959626-410d1480-5b14-4615-8e48-73e5d12a72ed.png" width=15% height=15%>
 
-Just like in the glassical gates, the _NAND_ gate can be used to build _every_ other classical gate, in qubit-gates, a combination of the _CNOT_ gate and _single - qubit_ gates can represent _any_ multiple-ubit gate.
+Just like in the glassical gates, the _NAND_ gate can be used to build _every_ other classical gate, in qubit-gates, a combination of the _CNOT_ gate and _single - qubit_ gates can represent _any_ multiple-qubit gate.
 
 One important distinction between classical gates and qubit gates is that there is an irreversible loss of information when classical gates are used. For example - an output _0_ of the _AND_ gate can come from either of the following combinations - (0,1), (1,0), (0,0) - meaning, we cannot retrieve back the input by looking at the output. Surprisingly, qubit-gates, by their representation using _Unitary matrices_ (which are invertible), are also invertible - i.e. the input ca be uniquely determined by looking at the output.
 
