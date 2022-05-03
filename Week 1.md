@@ -69,7 +69,22 @@ Two important elements of a quantum circuit are:
 ### Qubit Copying - NOT ALLOWED!!!
 The _no-cloning_ theorem states that the qubits cannot be copied. A simple way of seeing this is that when a qubits is measured, _no information_ about the probability of the _other_ outcome (the extra hidden information in the qubit regarding the _other_ possibility than the one which is obtained) cannot be obtained. If somehow we _can_ copy the qubit.......there remains a possibility to retrieve the _"extra, hidden information"_, indicating that the qubit cannot have been copied in the first place. 
 
+# Linear Algebra 
+Since a good understanding of quantum mechanics is based upon a solid understanding of Linear Algebra, here is some basic review of the important concepts in Linear Algebra.
 
+## Vectors and Basic Notations
+1. A vectors in Quantum Mechanics is denoted by - <img src="https://user-images.githubusercontent.com/95964330/166400275-267c42c0-960c-439e-8396-9872eb6eeccb.png" width=2.2% height=2.2%>. The zero vector is denoted as **0** (not <img src="https://user-images.githubusercontent.com/95964330/166400403-5da0886d-32a3-4493-915d-de5bcdf0d510.png" width=2.2% height=2.2%>).
+2. A vector subspace of a vector space _V_ is a subset _W_ of _V_ such that _W_ is also a vector space, that is, _W_ must be closed under scalar multiplication and addition.
+3. Here are some basic notations: 
+
+
+<img src="https://user-images.githubusercontent.com/95964330/166400521-0ab48ac5-7b8b-4f3d-9d68-0abf13c9f9df.png" width=35% height=35%>
+
+## Bases, Linear Independence and Linear Operators
+
+1. A _spanning set_ is a set of vectors, such that any vector in the subspace can be written as a linear combination of those vectors.
+2. A set of _non-zero_ vectors is called _linearly dependent_, if there exists complex numbers such that a non-trivial linear combination of vectors is equal to the _0_ vector. If not, the set of vectors is called _linearly independent_.
+3. 
 
 
 
