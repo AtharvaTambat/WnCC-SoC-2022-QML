@@ -69,6 +69,36 @@ Two important elements of a quantum circuit are:
 ### Qubit Copying - NOT ALLOWED!!!
 The _no-cloning_ theorem states that the qubits cannot be copied. A simple way of seeing this is that when a qubits is measured, _no information_ about the probability of the _other_ outcome (the extra hidden information in the qubit regarding the _other_ possibility than the one which is obtained) cannot be obtained. If somehow we _can_ copy the qubit.......there remains a possibility to retrieve the _"extra, hidden information"_, indicating that the qubit cannot have been copied in the first place. 
 
+## Quantum Teleportation
+To give an overview of the problem at hand - Alice and Bob generated an EPR Pair together, they both get seperated, and Alice has to deliver a qubit to Bob with two conditions on how she can do that - she cannot view the qubit and can only send _classical_ information to Bob.
+
+<img src="https://user-images.githubusercontent.com/95964330/167312994-c528ff60-0ba9-4331-bf52-91f373f8b6d2.png" width=40% height=40%>
+
+As summarized in the figure, the steps she follows are:
+1. Alice sends her qubits through a CNOT gate.
+2. She sends her first qubit through a Hadamard gate 
+3. She performs a measurment of on bot the qubits.
+4. Voila!! She knows what operation bob needs to perform on the third and the last qubit (which can be shown mathematically), so that the qubit returns to its original state, and therefore Alice has successfully transferred the qubit Bob without Bob "seeing" the qubit.
+
+So.....can information be transmitted faster than light??? N..n..not really. The fact that Alice has to send Bob the information of which gate to apply to the last qubit, restricts 'faster than light' communication. Without the classical channel the teleportation does not convey any information at all.
+
+## Quantum Alorithms
+How does that class compare with the computations which can be performed using classical logical circuits? The quantum computer _does_ have an upper hand over a classical computer in some class of problems....which are elaborated below.
+
+### Toffoli Gates
+Classical gates (made of NAND and NOT) are irreversible, but can be replaced by an equivalent quantum _reversible_ gate known as the Toffoli gate. The Toffoli gate
+has three input bits and three output bits - two bits are _ontrol_ bits and one is the _output_ bit, as illustrated below:
+
+
+<img src="https://user-images.githubusercontent.com/95964330/167313676-adf4aafe-49c2-43c3-a2e3-36e4832b5646.png" width=40% height=40%>
+
+the rule for the toffoli gate is: The third bit is a target bit that is ﬂipped if both control bits are set to 1, and otherwise is left alone. 
+
+
+
+### Quantum Parallelism 
+
+### The Deutsch-Jozsa Algorithm 
 # Linear Algebra 
 Since a good understanding of quantum mechanics is based upon a solid understanding of Linear Algebra, here is some basic review of the important concepts in Linear Algebra.
 
