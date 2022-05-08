@@ -87,7 +87,7 @@ How does that class compare with the computations which can be performed using c
 
 ### Toffoli Gates
 Classical gates (made of NAND and NOT) are irreversible, but can be replaced by an equivalent quantum _reversible_ gate known as the Toffoli gate. The Toffoli gate
-has three input bits and three output bits - two bits are _ontrol_ bits and one is the _output_ bit, as illustrated below:
+has three input bits and three output bits - two bits are _control_ bits and one is the _output_ bit, as illustrated below:
 
 <img src="https://user-images.githubusercontent.com/95964330/167313676-adf4aafe-49c2-43c3-a2e3-36e4832b5646.png" width=40% height=40%>
 
