@@ -10,7 +10,7 @@ The linear combination may be written in terms of parameters as given below:
 
 and can be represented on a sphere as shown (Bloch Sphere):
 
-![Bloch Sphere](https://user-images.githubusercontent.com/95964330/164911401-18eaa4fc-23b2-4623-a6f0-2630dfee2f4b.png)
+<img src="https://user-images.githubusercontent.com/95964330/164911401-18eaa4fc-23b2-4623-a6f0-2630dfee2f4b.png" width=20% height=20%>
 
 ## Multiple Qubits
 Let us consider the case of two Qubits. The system can be expressed as a superposition (linear combination) of 4 _computational basis states_ (in simple words 4 different possibilities that the system can "collapse" into) - <img src="https://user-images.githubusercontent.com/95964330/164911803-8a1d0b81-915b-4169-8777-876bcc9f42c2.png" width=10% height=10%> ). An important two-qubit state is a Bell State or EPR state:
@@ -89,16 +89,16 @@ How does that class compare with the computations which can be performed using c
 Classical gates (made of NAND and NOT) are irreversible, but can be replaced by an equivalent quantum _reversible_ gate known as the Toffoli gate. The Toffoli gate
 has three input bits and three output bits - two bits are _ontrol_ bits and one is the _output_ bit, as illustrated below:
 
-
 <img src="https://user-images.githubusercontent.com/95964330/167313676-adf4aafe-49c2-43c3-a2e3-36e4832b5646.png" width=40% height=40%>
 
-the rule for the toffoli gate is: The third bit is a target bit that is ﬂipped if both control bits are set to 1, and otherwise is left alone. 
-
-
+The rule for the Toffoli gate is: The third bit is a target bit that is ﬂipped if both control bits are set to 1, and otherwise is left alone. The toffoli gate can be used to simulate both the NAND gate and the NOT gate - and therefore, all the classical gates. 
 
 ### Quantum Parallelism 
+Heuristically, and at the risk of over-simplifying, quantum parallelism allows quantum computers to evaluate a function f(x) for many different values of x simultaneously. 
+### Deutsch's Algorithm
 
 ### The Deutsch-Jozsa Algorithm 
+
 # Linear Algebra 
 Since a good understanding of quantum mechanics is based upon a solid understanding of Linear Algebra, here is some basic review of the important concepts in Linear Algebra.
 
