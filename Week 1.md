@@ -82,7 +82,7 @@ As summarized in the figure, the steps she follows are:
 
 So.....can information be transmitted faster than light??? N..n..not really. The fact that Alice has to send Bob the information of which gate to apply to the last qubit, restricts 'faster than light' communication. Without the classical channel the teleportation does not convey any information at all.
 
-## Quantum Alorithms
+## Quantum Algorithms
 How does that class compare with the computations which can be performed using classical logical circuits? The quantum computer _does_ have an upper hand over a classical computer in some class of problems....which are elaborated below.
 
 ### Toffoli Gates
