@@ -78,7 +78,7 @@ As summarized in the figure, the steps she follows are:
 1. Alice sends her qubits through a CNOT gate.
 2. She sends her first qubit through a Hadamard gate 
 3. She performs a measurment of on bot the qubits.
-4. Voila!! She knows what operation bob needs to perform on the third and the last qubit (which can be shown mathematically), so that the qubit returns to its original state, and therefore Alice has successfully transferred the qubit Bob without Bob "seeing" the qubit.
+4. Voila!! She knows what operation Bob needs to perform on the third and the last qubit (which can be shown mathematically), so that the qubit returns to its original state, and therefore Alice has successfully transferred the qubit Bob without Bob "seeing" the qubit.
 
 So.....can information be transmitted faster than light??? N..n..not really. The fact that Alice has to send Bob the information of which gate to apply to the last qubit, restricts 'faster than light' communication. Without the classical channel the teleportation does not convey any information at all.
 
