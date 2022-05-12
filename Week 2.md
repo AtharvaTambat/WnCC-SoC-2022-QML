@@ -15,6 +15,6 @@ The Pauli matrices give rise to three useful classes of unitary matrices when th
 where α is some overall phase factor.
 
 ## Controlled operations
-'If A is true, then do B'. This type of controlled operation is one of the most useful incomputing, both classical and quantum. A controlled-U operation is a two qubit operation, again with a control and a target qubit. If the control qubit is set then U is applied to the target qubit, otherwise the target qubit is left alone. 
+'If A is true, then do B'. This type of controlled operation is one of the most useful in computing, both classical and quantum. A controlled-U operation is a two qubit operation, again with a control and a target qubit. If the control qubit is set then U is applied to the target qubit, otherwise the target qubit is left alone. 
 
 <img src="https://user-images.githubusercontent.com/95964330/168092291-f44fe741-8790-47f5-8006-9c175c9a5178.png" width=20% height=320%>
