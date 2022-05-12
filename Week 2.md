@@ -17,4 +17,29 @@ where α is some overall phase factor.
 ## Controlled operations
 'If A is true, then do B'. This type of controlled operation is one of the most useful in computing, both classical and quantum. A controlled-U operation is a two qubit operation, again with a control and a target qubit. If the control qubit is set then U is applied to the target qubit, otherwise the target qubit is left alone. 
 
-<img src="https://user-images.githubusercontent.com/95964330/168092291-f44fe741-8790-47f5-8006-9c175c9a5178.png" width=20% height=320%>
+<img src="https://user-images.githubusercontent.com/95964330/168092291-f44fe741-8790-47f5-8006-9c175c9a5178.png" width=20% height=20%>
+
+### Phase shift on qubit
+
+Our ﬁrst step will be to apply the phase shift exp(iα) on the target qubit, controlled by the control qubit. The circuit for the same is represented as follows:
+
+<img src="https://user-images.githubusercontent.com/95964330/168101910-0c4d3b41-dfca-4342-bd06-c96477db623c.png" width=30% height=30%>
+
+We may now complete the construction of the controlled-U operation, as shown in the figure below:
+
+<img src="https://user-images.githubusercontent.com/95964330/168102460-1f1b22fc-6bcb-4582-90ee-f1eeab5af874.png" width=35% height=35%>
+
+### Multi-Qubit conditioning and Controlling Target Qubit When Control Bit Is Not |1>
+
+Now that we know how to condition on a single qubit being set, what about conditioning on multiple qubits? More generally, suppose we have n + k qubits, and U is a k qubit unitary operator. Then we deﬁne the controlled operation Cn(U) by the equation:
+
+<img src="https://user-images.githubusercontent.com/95964330/168104142-e1b8fe9d-6c59-4f77-aa74-f9058813d089.png" width=50% height=50%>
+
+That is, the operator U is applied to the last k qubits if the ﬁrst n qubits are all equal to one, and otherwise, nothing is done. How do we implement this with our existing repertoire of gates, where U is an arbitrary single qubit unitary operation? The steps for the same are:
+
+1. 
+
+
+
+
+
