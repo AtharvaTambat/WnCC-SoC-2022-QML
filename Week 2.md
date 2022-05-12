@@ -37,7 +37,27 @@ Now that we know how to condition on a single qubit being set, what about condit
 
 That is, the operator U is applied to the last k qubits if the ﬁrst n qubits are all equal to one, and otherwise, nothing is done. How do we implement this with our existing repertoire of gates, where U is an arbitrary single qubit unitary operation? The steps for the same are:
 
-1. 
+1. Suppose the control qubits are in the computational basis state |c1, c2, . . . , cn>. The ﬁrst stage of the circuit is to reversibly all the control bits c1, . . . , cn together to produce the product c1 · c2 . . . cn - by continuously applying Toffoli gates to sebsequent qubits.
+2. Next, a U operation on the target qubit is performed, conditional on the ﬁnal work qubit being set to one. That is, U is applied if and only if all of c1 through cn are set.
+3. Finally, the last part of the circuit just reverses
+the steps of the ﬁrst stage, returning all the work qubits to their initial state, |0>. The combined result, therefore, is to apply the unitary operator U to the target qubit, if and only if all the control bits c1 through cn are set, as desired.
+
+The following figure summarizes the process:
+
+<img src="https://user-images.githubusercontent.com/95964330/168136833-282bac31-b5f2-4e8c-bf41-bb3d62bb3b54.png" width=30% height=30%>
+
+What is special with using |1> for deciding whether a _Unitary_ operation will be performed?......NOTHING!!! In the following section we shall consider how to change the circuit a little bit (by insertion of X gates) so that the U-gate responds to |0> instead of |1>. (We shall use the open circle notation to indicate conditioning on the qubit being set to zero, while a closed circle indicates conditioning on the qubit being set to one.)
+
+<img src="https://user-images.githubusercontent.com/95964330/168137717-dded19af-45da-4bfd-b932-0fb1487d7220.png" width=30% height=30%>
+
+
+## Measurement
+
+
+
+
+
+
 
 
 
