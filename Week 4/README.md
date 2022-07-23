@@ -18,6 +18,12 @@ We have to define some function, which gives us a measure of how far our guess i
 $$ J(\theta) = \frac{1}{2} \sum_{i = 1} ^{n} (h_{\theta}(x^{(i)}) - y^{(i)})^2$$
 
 ## Least Mean Square Algorithm
+We want to minimize $J(\theta)$. Let us initialize random values for all the weights $\theta_{i}$ s and then repeatedly change $\theta$ to make $J(\theta)$ smaller, until hopefully we converge to a value of $\theta$ that minimizes $J(\theta)$. Specifically, let’s consider the gradient descent algorithm, which starts with some initial θ, and repeatedly performs the update:
+
+$$ \theta_j := \theta_j - \alpha\frac{\partial}{\partial \theta_j}J(\theta)$$
+
+Here, α is called the learning rate. In order to calculate the partial derivative:
+
 
 
 
