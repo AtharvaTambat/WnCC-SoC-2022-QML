@@ -11,7 +11,7 @@ Instead of long summations the hypothesis can be represented in terms of vectors
 
 $$h(x) = \theta^{T}x$$
 
-## Cost function
+## Cost function 💰 💸
 
 We have to define some function, which gives us a measure of how far our guess is from the given dataset. We do this by defining the cost function - which uses least squares summation - to "measure the sum of all distances" between our guess and actual value of parameter, we have to guess.
 
@@ -81,7 +81,7 @@ The distortion function J is a non-convex function, and so coordinate descent on
 
 This is the general overview of the k-means clustering algorithm. It can get stuck in a bad local minima or, the no. of groups selected, might not be appropriate to group the cluster etc. So, run the k-means algorithm multiple times, with different initial points and number of groupd to see which set of hyper-parameters works the best.
 
-# Neural Networks
+# Neural Networks :spider_web:
 The human visual system is one of the wonders of the world. Most people effortlessly recognize digits. The difficulty of visual pattern recognition becomes apparent if you attempt to write a computer program to recognize digits. Neural networks approach the problem in a different way. 
 
 ## The Perceptrons
@@ -102,7 +102,7 @@ $$
 
 But how can we devise such algorithms for a neural network? Suppose we make a neural network out of preceptrons and train it to recognize one image. We would want that a small change in output, to cause a small change in the learnt values of the parameters of the precetron, but with the "abrupt" nature of the output of the preceptron, this is not possible. Therefore we replace it with another neuron.
 
-## The sigmoid neuron
+## The Sigmoid Neuron :brain:
 The sigmoid neuron has output $\sigma(w\cdot x + b)$ $$ for:
 
 $$\begin{eqnarray} 
@@ -126,7 +126,7 @@ A specific part of the network is assigned to identify the "shape" in a portion(
 The pixels are broken down in an array and fed to the neural net. The neurons then initialize random weights and just like in the Least Mean Square Algorithm, minimizing the cost function, using gradient descent algorithm: 
 
 $$\begin{eqnarray}  C(w,b) \equiv
-  \frac{1}{2n} \sum_x \| y(x) - a\|^2.
+  \frac{1}{2n} \sum_x \|| y(x) - a\||^2.
 \end{eqnarray} $$
 
 where, y(x) is a 10 dimensional vector. For example, if a particular training image, x, depicts a 6, then $y(x)=(0,0,0,0,0,0,1,0,0,0)^T$ is the desired output from the network.
