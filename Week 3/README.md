@@ -1,4 +1,4 @@
-# The Last Dance with QCQI
+# The Last Dance with QCQI :dancer:
 
 ## Quantum Fourier Transform
 The discrete Fourier transform is usually described as transforming a set $x_0,...,x_{N−1}$ of N complex numbers into a set of complex numbers $y_0,...,y_{N−1}$ defined by:
@@ -76,7 +76,7 @@ $$\begin{aligned}
 
 $$ |\psi_4\rangle = | 2^n \phi \rangle \otimes | \psi \rangle $$
 
-## Grover's Search Algorithm
+## Grover's Search Algorithm :eyeglasses:
 
 The Grover's search is used to carry out an unstructured search. Say, there is a function $f(x)$ which is equal to 1 for a binary input $x_0$, and 0 for all other binary inputs (given the number of bits is fixed), Grover search can look for $x_0$ with $O(\sqrt{N})$ instead of the classical algorithm, which takes $O(N)$ time - having to go through each element one-by-one.
 
@@ -97,6 +97,9 @@ $$U_\omega|x\rangle = (-1)^{f(x)}|x\rangle$$
 
 What the repeating the above steps does is that, it brings the uniform superposition closer and closer to the requires state $x_0$ with each iteration i.e. it increase the coeffecient of the correct computational basis ($x_0) while decreasing the coeffecients of the rest in the superposition - increasing the probability of getting the right answer at the end.
 
+## Shor's Algorithm
+
+Shor's Algorithm solves the problem of period finding.
 
 
 
