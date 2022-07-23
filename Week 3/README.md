@@ -99,9 +99,46 @@ What the repeating the above steps does is that, it brings the uniform superposi
 
 ## Shor's Algorithm
 
-Shor's Algorithm solves the problem of period finding.
+Shor's Algorithm solves the problem of period finding. It basically finds the period of $f(x) = a^x(modN)$. 
+![image](https://user-images.githubusercontent.com/95964330/180619599-bc574da8-42f3-4f00-8ce3-045ad77f6b0b.png)
 
+1. **Superposition:** After application of Hadamard gates to all the qubits of the first register,
+ 
+ $$ |\psi_1\rangle = {\frac {1}{\sqrt{2^{n}}}}\left(|0\rangle +|1\rangle \right)^{\otimes n} \lvert 1 \rangle $$
+ 
+2. The lower register has the value $|1\rangle$. $|1\rangle$ is a superposition of $|u_s\rangle$'s, which is defined as follows:
 
+$$\begin{aligned}
+|u_s\rangle &= \tfrac{1}{\sqrt{r}}\sum_{k=0}^{r-1}{e^{-\tfrac{2\pi i s k}{r}}|a^k \bmod N\rangle}\\ 
+\end{aligned}$$
+
+We also notice, that the sum of all such $|u_s\rangle$'s is $|1\rangle$:
+
+$$\tfrac{1}{\sqrt{r}}\sum_{s=0}^{r-1} |u_s\rangle = |1\rangle $$
+
+Also notice, that $U$, such that $U|y\rangle \equiv |ay \bmod N \rangle$, $|u_s\rangle$ is the eigenvector of U:
+
+$$U|u_s\rangle = e^{\tfrac{2\pi i s}{r}}|u_s\rangle  $$
+
+3. **Application of U gates:** Application of controlled U's in such a fashion actually implements $U^j|\phi\rangle$, where $j$ is the number whose binary equivalent is the computational basis in the first register and $|\phi\rangle$ is the state of the second register.So the state of qubits in the first register after application of gates is $|\psi\rangle$
+
+$$\begin{equation}
+	|\psi\rangle = \frac{1}{\sqrt{2^n}}\sum_{j=0} ^{2^n - 1} |j\rangle U^j|1\rangle = \frac{1}{\sqrt{2^n}}\sum_{j=0} ^{2^n - 1} |j\rangle |x^jmodN\rangle
+\end{equation} $$
+
+It can be proved that
+
+$$\frac{1}{\sqrt{r}}\sum_{s=0} ^{r-1} e^\frac{2 \pi isk}{r} |u_s\rangle = |x^k modN\rangle $$
+
+Putting the previous two equations together, the state after application of U gates:
+
+$$	|\psi\rangle = \frac{1}{\sqrt{r2^n}} \sum_{j=0} ^{2^n - 1}  \sum_{s=0} ^{r-1} |j\rangle e^\frac{2 \pi isj}{r} |u_s\rangle  $$
+
+4. **Inverse Fourier Transform:** The previous equation looks very similar to the QFT of *some* state. On applying inverse Fourier Transform, we get:
+
+$$\frac{1}{\sqrt{r}} \sum_{s = 0} ^{r-1} |\frac{s}{r}\rangle |u_s\rangle $$
+
+5. **Measurement:** On measuring the first register, we will measure the binary value of $\frac{s}{r}$ for some $s \in [0,r) $
 
 ## Implementation
 The following programs have been implemented for this week.
