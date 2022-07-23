@@ -15,6 +15,23 @@ Classically, the fast Fourier transform takes roughly $N log(N) = n2^n$ steps to
 
 Nevertheless, problems like the Deutsch’s problem, and Shor’s algorithms for discrete logarithm and factoring, can be solved effeciently using QFT.
 
+With a little algebra the quantum Fourier transform can be given the following useful product representation:
+
+$$ \begin{aligned}
+QFT_{2^n}\vert x \rangle = 
+& \frac{1}{\sqrt{2^n}}
+\left(\vert0\rangle + e^{\frac{2\pi i}{2}x} \vert1\rangle\right) 
+\otimes
+\left(\vert0\rangle + e^{\frac{2\pi i}{2^2}x} \vert1\rangle\right) 
+\otimes  
+\ldots
+\otimes
+\left(\vert0\rangle + e^{\frac{2\pi i}{2^{n-1}}x} \vert1\rangle\right) 
+\otimes
+\left(\vert0\rangle + e^{\frac{2\pi i}{2^n}x} \vert1\rangle\right) 
+\end{aligned} $$
+
+If x = $j_1j_2j_3...j_n$ as represented in binary, $\frac{x}{2^k} = j_1j_2...j_{n-k}.j_{n-k+1}...j_n$ in binary (by shifting the bits), and, $e^{i2\pi\frac{x}{2^k}}$ =  $e^{i2\pi j_1j_2...j_{n-k}.j_{n-k+1}...j_n}$ = $e^{i2\pi 0.j_{n-k+1}...j_n}$ (as $e^{i2\pi j_1j_2...j_{n-k}.j_{n-k+1}...j_n}$ = $e^{i2\pi j_1j_2...j_{n-k} + 0.j_{n-k+1}...j_n}$ = $(1)e^{i2\pi 0.j_{n-k+1}...j_n}$)
 
 ## Quantum Phase Estimation 
 
