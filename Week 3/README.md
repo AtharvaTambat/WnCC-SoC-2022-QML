@@ -1,6 +1,6 @@
 # The Last Dance with QCQI :dancer:
 
-## Quantum Fourier Transform
+## Quantum Fourier Transform :atom:
 The discrete Fourier transform is usually described as transforming a set $x_0,...,x_{N−1}$ of N complex numbers into a set of complex numbers $y_0,...,y_{N−1}$ defined by:
 
 $$y_k \equiv \frac{1}{\sqrt{N}}\sum ^{j = N-1} _{j=0} e^\frac{2\pi ijk}{N} x_j$$
@@ -44,7 +44,7 @@ $$R_k \equiv \begin{bmatrix}
 0&e^\frac{2\pi i}{2^k} \\
 \end{bmatrix}$$
 
-## Quantum Phase Estimation 
+## Quantum Phase Estimation :electron:
 
 The Quantum Phase Estimation is one of the uses of the QFT to guess the global phase ($\alpha$) that a Unitary matrix U adds to its eigenvector $|\psi\rangle$
 
