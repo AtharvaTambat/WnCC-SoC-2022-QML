@@ -46,6 +46,35 @@ $$R_k \equiv \begin{bmatrix}
 
 ## Quantum Phase Estimation 
 
+The Quantum Phase Estimation is one of the uses of the QFT to guess the global phase ($\alpha$) that a Unitary matrix U adds to its eigenvector $|\psi\rangle$
+
+$$ U|\psi\rangle = e^{i\alpha}|\psi\rangle $$
+
+The circuit for phase estimation, is as follows:
+![image](https://user-images.githubusercontent.com/95964330/180615245-8eb67782-461e-41d1-af71-ccfd2596ab79.png)
+
+1. **Setup:** first register has qubits $|\psi_0\rangle = \lvert 0 \rangle^{\otimes n} \lvert \psi \rangle$
+2. **Superposition:** After application of Hadamard gates to all the qubits of the first register,
+ 
+ $$ |\psi_1\rangle = {\frac {1}{\sqrt{2^{n}}}}\left(|0\rangle +|1\rangle \right)^{\otimes n} \lvert \psi \rangle $$
+ 
+3. **Controlled Uoperations:** 
+If 
+
+$$ U|\psi\rangle = e^{2\pi i \phi}|\psi\rangle $$ 
+
+if the controller qubit = $|1\rangle$
+
+then, the state in the quantum circuit becomes:
+
+$$\begin{aligned}
+|\psi_{2}\rangle & =\frac {1}{2^{\frac {n}{2}}} \left(|0\rangle+{e^{\boldsymbol{2\pi i} \phi 2^{n-1}}}|1\rangle \right) \otimes \cdots \otimes \left(|0\rangle+{e^{\boldsymbol{2\pi i} \phi 2^{1}}}\vert1\rangle \right) \otimes \left(|0\rangle+{e^{\boldsymbol{2\pi i} \phi 2^{0}}}\vert1\rangle \right) \otimes |\psi\rangle\\\\
+& = \frac{1}{2^{\frac {n}{2}}}\sum _{k=0}^{2^{n}-1}e^{\boldsymbol{2\pi i} \phi k}|k\rangle \otimes \vert\psi\rangle
+\end{aligned}$$
+
+4. **Inverse Quantum Fourier Transform:** The above expression looks similar to the one obtained after QFT of $|x\rangle$, so the logical thing would be to apply inverse QFT, and on doing so, we find that $x = 2^n \phi$. So, we get the binary value of $2^n \phi$ in the first register, with high probability, while the state in second register is unaffected.
+
+$$ |\psi_4\rangle = | 2^n \phi \rangle \otimes | \psi \rangle $$
 
 ## Implementation
 The following programs have been implemented for this week.
