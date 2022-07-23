@@ -140,10 +140,13 @@ $$\frac{1}{\sqrt{r}} \sum_{s = 0} ^{r-1} |\frac{s}{r}\rangle |u_s\rangle $$
 
 5. **Measurement:** On measuring the first register, we will measure the binary value of $\frac{s}{r}$ for some $s \in [0, r) $. By applying continued fractions algorithm, we can guess the denominator of the fraction, which is the required period of the function $f(x) = a^x(mod N)$
 
+Applying classical algorithm for finding the factors once the period is obtained.
+
 ## Implementation
 The following programs have been implemented for this week.
 
-1. Quantum Fourier Transform
-2. Quantum Phase Estimation
-3. Shor's Algorithm
-4. Grover's Algorithm
+1. [Quantum Fourier Transform](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%203/Quantum_Fourier_Transform.ipynb)
+2. [Quantum Phase Estimation](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%203/Quantum_Phase_Estimation.ipynb)
+3. [Shor's Algorithm](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%203/Shor's_Algorithm.ipynb)
+4. [Grover's Algorithm](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%203/Grover's_Search_Algorithm.ipynb)
+
