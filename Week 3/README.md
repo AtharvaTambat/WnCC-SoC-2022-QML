@@ -31,7 +31,18 @@ QFT_{2^n}\vert x \rangle =
 \left(\vert0\rangle + e^{\frac{2\pi i}{2^n}x} \vert1\rangle\right) 
 \end{aligned} $$
 
-If x = $j_1j_2j_3...j_n$ as represented in binary, $\frac{x}{2^k} = j_1j_2...j_{n-k}.j_{n-k+1}...j_n$ in binary (by shifting the bits), and, $e^{i2\pi\frac{x}{2^k}}$ =  $e^{i2\pi j_1j_2...j_{n-k}.j_{n-k+1}...j_n}$ = $e^{i2\pi 0.j_{n-k+1}...j_n}$ (as $e^{i2\pi j_1j_2...j_{n-k}.j_{n-k+1}...j_n}$ = $e^{i2\pi j_1j_2...j_{n-k} + 0.j_{n-k+1}...j_n}$ = $(1)e^{i2\pi 0.j_{n-k+1}...j_n}$)
+If x = $j_1j_2j_3...j_n$ as represented in binary, $\frac{x}{2^k} = j_1j_2...j_{n-k}.j_{n-k+1}...j_n$ in binary (by shifting the bits), and, $e^{i2\pi\frac{x}{2^k}}$ =  $e^{i2\pi j_1j_2...j_{n-k}.j_{n-k+1}...j_n}$ = $e^{i2\pi 0.j_{n-k+1}...j_n}$ (as $e^{i2\pi j_1j_2...j_{n-k}.j_{n-k+1}...j_n}$ = $e^{i2\pi( j_1j_2...j_{n-k} + 0.j_{n-k+1}...j_n)}$ = $(1)e^{i2\pi 0.j_{n-k+1}...j_n}$)
+
+Therefore, the circuit for the same is:
+
+![image](https://user-images.githubusercontent.com/95964330/180614388-fb9f8262-df01-41be-8831-7d32f12e6e61.png)
+
+where,
+
+$$R_k \equiv \begin{bmatrix}
+1&0 \\
+0&e^\frac{2\pi i}{2^k} \\
+\end{bmatrix}$$
 
 ## Quantum Phase Estimation 
 
