@@ -76,6 +76,30 @@ $$\begin{aligned}
 
 $$ |\psi_4\rangle = | 2^n \phi \rangle \otimes | \psi \rangle $$
 
+## Grover's Search Algorithm
+
+The Grover's search is used to carry out an unstructured search. Say, there is a function $f(x)$ which is equal to 1 for a binary input $x_0$, and 0 for all other binary inputs (given the number of bits is fixed), Grover search can look for $x_0$ with $O(\sqrt{N})$ instead of the classical algorithm, which takes $O(N)$ time - having to go through each element one-by-one.
+
+The following is the circuit for implementing Grover's search:
+
+![image](https://user-images.githubusercontent.com/95964330/180616162-08083c2a-b538-43c5-a108-226d44b74224.png)
+![image](https://user-images.githubusercontent.com/95964330/180616183-fa9050eb-35b2-4bd2-9a0a-623f89a5f8c4.png)
+
+1. **Superposition:** After application of Hadamard gates to all the qubits of the first register,
+ 
+ $$ |\psi_1\rangle = {\frac {1}{\sqrt{2^{n}}}}\left(|0\rangle +|1\rangle \right)^{\otimes n} \lvert \psi \rangle $$
+ 
+2. **Oracle:** We, now have to somehow implement such a gate, which inverts the phase of that computational basis, in the superposition, for which f(x) = 1
+
+$$U_\omega|x\rangle = (-1)^{f(x)}|x\rangle$$
+
+3. **Diffuser:** The "Diffuser" is the gate $U_s = \left(2|s\rangle\langle s| - 1\right) = H^{\otimes n}(2|0\rangle \langle0| - I)H^{\otimes n}$, where $|s\rangle$ is the uniform superposition of all possible computational basis with the given number of bits.
+
+What the repeating the above steps does is that, it brings the uniform superposition closer and closer to the requires state $x_0$ with each iteration i.e. it increase the coeffecient of the correct computational basis ($x_0) while decreasing the coeffecients of the rest in the superposition - increasing the probability of getting the right answer at the end.
+
+
+
+
 ## Implementation
 The following programs have been implemented for this week.
 
