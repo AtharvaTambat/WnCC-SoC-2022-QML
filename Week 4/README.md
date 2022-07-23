@@ -76,7 +76,10 @@ How do we know that we will converge to an answer? To get a quantitative measure
 
 $$J(c, \mu) =  \sum_{i = 1} ^{n} ||x^{(i)} - \mu_{c^{(i)}}||^2$$
 
+Thus, J measures the sum of squared distances between each training example $x^{(i)}$ and the cluster centroid $\mu_{c^{(i)}}$ to which it has been assigned.
+The distortion function J is a non-convex function, and so coordinate descent on J is not guaranteed to converge to the global minimum.
 
+This is the general overview of the k-means clustering algorithm. It can get stuck in a bad local minima or, the no. of groups selected, might not be appropriate to group the cluster etc. So, run the k-means algorithm multiple times, with different initial points and number of groupd to see which set of hyper-parameters works the best.
 
 
 # **Implementation**
