@@ -103,7 +103,7 @@ $$
 But how can we devise such algorithms for a neural network? Suppose we make a neural network out of preceptrons and train it to recognize one image. We would want that a small change in output, to cause a small change in the learnt values of the parameters of the precetron, but with the "abrupt" nature of the output of the preceptron, this is not possible. Therefore we replace it with another neuron.
 
 ## The Sigmoid Neuron :brain:
-The sigmoid neuron has output $\sigma(w\cdot x + b)$ $$ for:
+The sigmoid neuron has output $\sigma(w\cdot x + b)$  for:
 
 $$\begin{eqnarray} 
   \sigma(z) \equiv \frac{1}{1+e^{-z}}.
