@@ -109,7 +109,7 @@ $$\begin{eqnarray}
   \sigma(z) \equiv \frac{1}{1+e^{-z}}.
 \end{eqnarray} $$
 
-The output of a sigmoid neuron with inputs $x_1,x_2,…,$ weights $ w_1,w_2,…,$ and bias b is
+The output of a sigmoid neuron with inputs $x_1,x_2,…,$ weights $w_1,w_2,…,$ and bias b is
 
 $$\begin{eqnarray} 
   \frac{1}{1+\exp(-\sum_j w_j x_j-b)}.
