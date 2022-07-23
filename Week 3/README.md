@@ -15,6 +15,7 @@ Classically, the fast Fourier transform takes roughly $N log(N) = n2^n$ steps to
 
 Nevertheless, problems like the Deutsch’s problem, and Shor’s algorithms for discrete logarithm and factoring, can be solved effeciently using QFT.
 
+
 ## Quantum Phase Estimation 
 
 
