@@ -46,6 +46,39 @@ $$ \theta := \theta + \alpha \sum_{j = 1} ^{n} (y^{(i)} - h_{\theta}(x^{(i)})) x
 
 This is the basic overview of the algorithm. More fine-tuning of the algorithm can be done with adjusting the weights of differnt input parameters, and choosing hyperparameters such as number of steps, the learning rate $\alpha$ etc.
 
+# Clustering 
+Clustering is a part of unsupervised learning algorithm - which means that the dataset does not have a value that we have to guess, like in linear regression.
+Here, we are given data as a scatter plot in multiple dimensions, and we have to divide them in a given number of groups. Foe this, we use the k-means algorithm.
+
+The k-means clustering algorithm is as follows:
+
+1. Initialize cluster centroids $\mu_1, \mu_2, . . . , \mu_k \in \mathbb{R}^d$ randomly.
+2. Repeat until convergence {
+
+For every i, set:
+
+$$c^{(i)} :=  argmin_{j} || x^{(i)} - \mu_j ||^2$$
+
+For each j, set:
+
+$$\mu_j := \frac{ \Sigma_{i = 1} ^{n} x^{(i)} (c^{(i)} = j) } { \Sigma_{i = 1} ^{n} 1 (c^{(i)} = j ) } $$
+
+}
+
+3. The above two steps basically means that we first initialize randomly n points ($a_1, a_2,...a_n$) (n = number of groups) , and then we iterate over all the points in the dataset and group the points into n sets ($S_k$)
+
+$\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ S_k$ = { $x^{(i)} : x^{(i)}$ is closest to $a_k$}
+
+4. We then calculate the mean of all the points in a particular set, $S_k$, and re-initialize the point $a_k$ to the mean of all the points in that set
+5. We iterate over the above two steps, hoping to converge to an answer.
+
+How do we know that we will converge to an answer? To get a quantitative measure for that we define the **distortion function**:
+
+$$J(c, \mu) =  \sum_{i = 1} ^{n} ||x^{(i)} - \mu_{c^{(i)}}||^2$$
+
+
+
+
 # **Implementation**
 The following programs for ML have been implemented as a part of evaluation for this week:
 1. Linear regression - Weather Dataset
