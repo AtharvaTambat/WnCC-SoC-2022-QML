@@ -81,6 +81,43 @@ The distortion function J is a non-convex function, and so coordinate descent on
 
 This is the general overview of the k-means clustering algorithm. It can get stuck in a bad local minima or, the no. of groups selected, might not be appropriate to group the cluster etc. So, run the k-means algorithm multiple times, with different initial points and number of groupd to see which set of hyper-parameters works the best.
 
+# Neural Networks
+The human visual system is one of the wonders of the world. Most people effortlessly recognize digits. The difficulty of visual pattern recognition becomes apparent if you attempt to write a computer program to recognize digits. Neural networks approach the problem in a different way. 
+
+## The Perceptrons
+The preceptron is kind of an artificial neuron. A perceptron takes several binary inputs, $x_1,x_2,…,$ and produces a single binary output. Each input is associated with a weight $w_i$.
+
+![image](https://user-images.githubusercontent.com/95964330/180625680-8da6ea83-a390-4d11-8d6b-7c3d6e02e2a0.png)
+
+The neuron's output, 0 or 1, is determined by whether the weighted sum $\Sigma_j w_j x_j$ is less than or greater than some threshold value ( = -b). 
+We define x and w vector, so, $\Sigma_j w_j x_j$ = $w\cdot x$.
+
+So, **output =**
+
+$$\begin{array}{ll}
+		0  & \mbox{if } w\cdot x + b \geq 0 \\
+		1 & \mbox{if } w\cdot x + b < 0
+	\end{array}
+$$
+
+But how can we devise such algorithms for a neural network? Suppose we make a neural network out of preceptrons and train it to recognize one image. We would want that a small change in output, to cause a small change in the learnt values of the parameters of the precetron, but with the "abrupt" nature of the output of the preceptron, this is not possible. Therefore we replace it with another neuron.
+
+## The sigmoid neuron
+The sigmoid neuron has output $\sigma(w\cdot x + b)$ $$ for:
+
+$$\begin{eqnarray} 
+  \sigma(z) \equiv \frac{1}{1+e^{-z}}.
+\end{eqnarray} $$
+
+The output of a sigmoid neuron with inputs $x_1,x_2,…,$ weights $ w_1,w_2,…,$ and bias b is
+
+$$\begin{eqnarray} 
+  \frac{1}{1+\exp(-\sum_j w_j x_j-b)}.
+\end{eqnarray}$$
+
+The sigmoid neuron is just the "smoothened" out version of the step function used in the preceptron to remove the difficulty of abrupt changes in the output, for small changes in the weights of the preceptrons. 
+
+## How Neural Networks work?
 
 # **Implementation**
 The following programs for ML have been implemented as a part of evaluation for this week:
