@@ -118,6 +118,22 @@ $$\begin{eqnarray}
 The sigmoid neuron is just the "smoothened" out version of the step function used in the preceptron to remove the difficulty of abrupt changes in the output, for small changes in the weights of the preceptrons. 
 
 ## How Neural Networks work?
+Let's say that the problem at hand is to identify the digit shown to the network. The network consists of input layers, hidden layers, and output layers.
+A specific part of the network is assigned to identify the "shape" in a portion(say, top-right corner) of the image - as shown in the following figure.
+
+![image](https://user-images.githubusercontent.com/95964330/180626267-062a96b5-1c64-46af-b373-cd45c51df7c9.png)
+
+The pixels are broken down in an array and fed to the neural net. The neurons then initialize random weights and just like in the Least Mean Square Algorithm, minimizing the cost function, using gradient descent algorithm: 
+
+$$\begin{eqnarray}  C(w,b) \equiv
+  \frac{1}{2n} \sum_x \| y(x) - a\|^2.
+\end{eqnarray} $$
+
+where, y(x) is a 10 dimensional vector. For example, if a particular training image, x, depicts a 6, then $y(x)=(0,0,0,0,0,0,1,0,0,0)^T$ is the desired output from the network.
+
+The gradients required in the algorithm, are calculated using a method called **back-propogation method**.
+
+# Support Vector Machine
 
 # **Implementation**
 The following programs for ML have been implemented as a part of evaluation for this week:
