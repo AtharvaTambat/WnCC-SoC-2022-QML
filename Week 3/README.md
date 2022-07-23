@@ -138,7 +138,7 @@ $$	|\psi\rangle = \frac{1}{\sqrt{r2^n}} \sum_{j=0} ^{2^n - 1}  \sum_{s=0} ^{r-1}
 
 $$\frac{1}{\sqrt{r}} \sum_{s = 0} ^{r-1} |\frac{s}{r}\rangle |u_s\rangle $$
 
-5. **Measurement:** On measuring the first register, we will measure the binary value of $\frac{s}{r}$ for some $s \in [0,r) $
+5. **Measurement:** On measuring the first register, we will measure the binary value of $\frac{s}{r}$ for some $s \in [0, r) $. By applying continued fractions algorithm, we can guess the denominator of the fraction, which is the required period of the function $f(x) = a^x(mod N)$
 
 ## Implementation
 The following programs have been implemented for this week.
