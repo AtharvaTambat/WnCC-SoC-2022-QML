@@ -134,6 +134,11 @@ where, y(x) is a 10 dimensional vector. For example, if a particular training im
 The gradients required in the algorithm, are calculated using a method called **back-propogation method**.
 
 # Support Vector Machine
+Support Vector Machines are used to find the **hyperplane** which classifies the given dataset. Consider a liner SVM classifier. It tries to find the hyperplane, in which the distance between the positive and the negative "gutter" (meaning explained ahead) is maximum
+
+![image](https://user-images.githubusercontent.com/95964330/180627046-3e56673a-a7f6-441e-bbf3-b3d6dd8e80a2.png)
+
+
 
 # **Implementation**
 The following programs for ML have been implemented as a part of evaluation for this week:
