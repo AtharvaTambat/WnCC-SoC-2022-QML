@@ -136,13 +136,53 @@ The gradients required in the algorithm, are calculated using a method called **
 # Support Vector Machine
 Support Vector Machines are used to find the **hyperplane** which classifies the given dataset. Consider a liner SVM classifier. It tries to find the hyperplane, in which the distance between the positive and the negative "gutter" (meaning explained ahead) is maximum
 
-![image](https://user-images.githubusercontent.com/95964330/180627046-3e56673a-a7f6-441e-bbf3-b3d6dd8e80a2.png)
+<img src = "https://user-images.githubusercontent.com/95964330/180627046-3e56673a-a7f6-441e-bbf3-b3d6dd8e80a2.png" width = 300>
 
+We suppose that the data is linearly classifiable i.e. a single "line" (let us call it the decision line)(in possibly, N dimensions) can classify the data.
+Let the line parallel to this decision line, passing through the data points closest to the line on either side be called positive and negative edges of the "gutter". For a good classification, we need that the distance between the two gutters be the largest.
 
+For a unit vector, perpendicular to the decision line be $\hat{w}$ and we choose real number b such that for a vector $\bar{x}$:
+
+$$ \bar{x} \cdot \hat{w} + b \ge 1$$ 
+
+for one cluster (let's call that the "positive" cluster) of data and 
+
+$$ \bar{x} \cdot \hat{w} + b \le 1$$ 
+
+for the other cluster (let's call that the "negative" cluster) of data
+
+Let $y_i$ be 1, for "positive" data cluster and -1, for "negative" data cluster. Which means that, for some $i$:
+
+$$ y_i(\bar{x}_i \cdot \hat{w} + b) \ge 1$$
+
+Therefore, the width of the gutter is
+
+$$\left( X_{+} - X_{-} \right) \cdot \frac{\bar{w}}{||\bar{w}||} = \left( 1 + b + 1 - b \right)\frac{1}{||\bar{w}||}  = \frac{2}{||\bar{w}||}$$
+
+for $X_{+}\  and\  X_{-}$ on the positive and negative edge of the gutter.
+
+Therefore, to maximize the width of the gutter, we have to minimize the following loss function:
+
+$$cost(x) = \frac{1}{2}||\bar{w}||^2$$
+
+under the conditions: 
+
+$$ y_i(\bar{x}_i \cdot \bar{w} + b) = 1 $$
+
+Using Lagranges Multipliers method on the function:
+
+$$ L = \frac{1}{2}||\bar{w}||^2 - \sum_{i = 1} ^{n} \alpha_i \left(y_i(\bar{x}_i \cdot \bar{w} + b) - 1\right) $$
+
+The minimum of the modified loss function is:
+
+$$L = \sum_{i} \alpha_1 - \frac{1}{2}\sum_i \sum_j \alpha_i \alpha_j y_i y_j \bar{x}_i \cdot \bar{x}_j $$
+
+> The important thing to notice in this is that the value depends on the dot product of the $\bar{x}_i s$. Now, suppose the data was not linearly classifiable, we can use a mapping ( $\phi(x_i)$ ) from the given datset to some other dataset which is linearly classifiable. What we need is the the function $K(x_i,x_j) = \phi(x_i)\cdot \phi(x_j)$ (the Kernel) and not the transformation $\phi$. This is the power :muscle: of SVMs.
 
 # **Implementation**
 The following programs for ML have been implemented as a part of evaluation for this week:
-1. Linear regression - Weather Dataset
-2. Clustering - Iris Flower Dataset
-3. Support Vector Machine - Breast Cancer Dataset
-4. Neural networks - Recognising digits from the MNIST Dataset
+1. [Linear regression - Weather Dataset - Part 1](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%204/Linear_Regression_Weather_Dataset_1.ipynb)
+2. [Linear regression - Weather Dataset - Part 2](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%204/Linear_Regression_Weather_Dataset_2.ipynb)
+3. [Clustering - Iris Flower Dataset](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%204/Clustering_Iris_Flower_Dataset.ipynb)
+4. [Support Vector Machine - Breast Cancer Dataset](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%204/SVM_Breast_Cancer_Dataset.ipynb)
+5. [Neural networks - Recognising digits from the MNIST Dataset](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%204/Neural_Network_Classifying_Digits.ipynb)
