@@ -101,7 +101,12 @@ has three input bits and three output bits - two bits are _control_ bits and one
 The rule for the Toffoli gate is: The third bit is a target bit that is ﬂipped if both control bits are set to 1, and otherwise is left alone. The toffoli gate can be used to simulate both the NAND gate and the NOT gate - and therefore, all the classical gates. 
 
 ### Quantum Parallelism 
-Heuristically, and at the risk of over-simplifying, quantum parallelism allows quantum computers to evaluate a function f(x) for many different values of x simultaneously. 
+Heuristically, and at the risk of over-simplifying, quantum parallelism allows quantum computers to evaluate a function $f(x)$ for many different values of x simultaneously. Suppose $f(x): \{ 0, 1 \} \rightarrow \{ 0, 1 \}$ is a function with a one-bit domain and range. With an appropriate sequence of logic gates it is possible to transform this state into $|x, y \oplus f(x)\rangle$. Let $|x\rangle$ be $\frac{|0\rangle + |1\rangle}{2}$ and y be $|0\rangle$, the state in the second qubit will be:
+
+$$ \frac{|0,f(0)\rangle + |1,f(1)\rangle}{2}$$
+
+Which means, we have information about $f(0) and f(1) $ in a single circuit, unlike in the case of classical circuit, where multiple circuits each built to compute $f(x)$ are executed simultaneously.
+
 ### Deutsch's Algorithm
 
 ### The Deutsch-Jozsa Algorithm 
