@@ -154,6 +154,28 @@ On measuring:
 > 1. If all query registers read 0, then f(x) is constant.
 > 2. If none of the query registers read 0, then f(x) is balanced.
 
+## The postulates of quantum mechanics
+
+### State space
+
+Associated to any isolated physical system is a complex vector space with inner product (that is, a Hilbert space) known as the state space of the system. The system is completely described by its state vector, which is a unit vector in the system’s state space.
+
+### Evolution
+
+The evolution of a closed quantum system is described by a unitary transformation. That is, the state $|\psi\rangle$ of the system at time $t_1$ is related to the
+state $|\psi'\rangle$ of the system at time $t_2$ by a unitary operator U which depends only on the times $t_1$ and $t_2$.
+
+$$ |\psi'\rangle =  U|\psi\rangle$$
+
+### Quantum measurement
+
+Quantum measurements are described by a collection {$M_m$} of measurement operators. These are operators acting on the state space of the system being measured. The index m refers to the measurement outcomes that may occur in the experiment. If the state of the quantum system is $|\psi\rangle$ immediately before the measurement then the probability that result m occurs is:
+
+$$ p(m) = \langle \psi|M_m\dagger M_m|\psi \rangle$$
+
+# Implementation
+
+No programs were given for the $1^{st}$ week.
 
 
 
