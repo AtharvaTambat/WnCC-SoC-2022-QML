@@ -92,6 +92,7 @@ So.....can information be transmitted faster than light??? N..n..not really. The
 ## Quantum Algorithms
 How does that class compare with the computations which can be performed using classical logical circuits? The quantum computer _does_ have an upper hand over a classical computer in some class of problems....which are elaborated below.
 
+
 ### Toffoli Gates
 Classical gates (made of NAND and NOT) are irreversible, but can be replaced by an equivalent quantum _reversible_ gate known as the Toffoli gate. The Toffoli gate
 has three input bits and three output bits - two bits are _control_ bits and one is the _output_ bit, as illustrated below:
@@ -130,6 +131,33 @@ On measuring, we get the value of $f(0) \oplus f(1)$ with unity probability.
 
 
 ### The Deutsch-Jozsa Algorithm 
+
+It is used to determine whether f(x) is constant for all values of x, or else f(x) is balanced, that is, equal to 1 for exactly half of all the possible x, and 0
+for the other half.
+
+<img src = "https://user-images.githubusercontent.com/95964330/181415965-b8360430-4509-4c46-91d0-a667ab48aa01.png" width = 400>
+
+On applying the Hadamard gate:
+
+$$ |\psi_1\rangle = \sum_{x} \frac{|x\rangle}{\sqrt{2^n}} \[ \frac{|0\rangle - |1\rangle}{\sqrt2} \]$$
+
+On applying the $U_f$ gate:
+
+$$ |\psi_2\rangle = \sum_{x} \frac{(-1)^{f(x)}|x\rangle}{\sqrt{2^n}} \[ \frac{|0\rangle - |1\rangle}{\sqrt2} \]$$
+
+On applying the Hadamard gate:
+
+$$ |\psi_3\rangle = \sum_{x} \frac{(-1)^{x \cdot z + f(x)}|x\rangle}{\sqrt{2^n}} \[ \frac{|0\rangle - |1\rangle}{\sqrt2} \]$$
+
+On measuring:
+
+> 1. If all query registers read 0, then f(x) is constant.
+> 2. If none of the query registers read 0, then f(x) is balanced.
+
+
+
+
+
 
 
 
