@@ -64,7 +64,16 @@ It is the ﬁnal element used in quantum circuits - a projective measurement in 
 
 > This in turn implies that any unitary operation can be approximated to arbitrary accuracy using Hadamard, phase, CNOT , and $\frac{\pi}{8}$ gates.
 
+# Implementation
 
+The following programs were implemented for this week:
+
+1. [Preparation of Bell State](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%202/Bell_State_Preparation.ipynb)
+2. [Preparation of general GHZ State](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%202/GHZ_State_Preparation.ipynb)
+3. [Swapping Qubits](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%202/Swapping_Qubits.ipynb)
+4. [Incrementing n (here, 3) bit qubit state by 1](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%202/Increment_3_Qubit_State.ipynb)
+5. [Berstein-Vazirani Algorithm](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%202/Code_Bernstein-VaziraniAlgorithm.py)
+6. [Quantum Teleportation](https://github.com/AtharvaTambat/WnCC-SoC-2022-QML/blob/main/Week%202/Code_QuantumTeleportation.py)
 
 
 
