@@ -51,8 +51,18 @@ What is special with using $|1\rangle$ for deciding whether a _Unitary_ operatio
 
 
 ## Measurement
+It is the ﬁnal element used in quantum circuits - a projective measurement in the computational basis is denoted using a ‘meter’ symbol. It follows the following two principles:
 
+1. Prinicple of deferred measurement: Measurements can always be moved from an intermediate stage of a quantum circuit to the end of the circuit; if the measurement results are used at any stage of the circuit then the classically controlled operations can be replaced by conditional quantum operations.
 
+2. Principle of implicit measurement: Without loss of generality, any unterminated quantum wires (qubits which are not measured) at the end of a quantum circuit may be assumed to be measured.
+
+## Universal quantum gates
+1. An arbitrary unitary operator may be expressed exactly as a product of unitary operators that each acts non-trivially only on a subspace spanned by two computational basis states.
+2. An arbitrary unitary operator may be expressed exactly using single qubit and gates.
+3. Single qubit operation may be approximated to arbitrary accuracy using the Hadamard, phase, and $\frac{\pi}{8}$ gates.
+
+> This in turn implies that any unitary operation can be approximated to arbitrary accuracy using Hadamard, phase, CNOT , and $\frac{\pi}{8}$ gates.
 
 
 
