@@ -64,7 +64,7 @@ Note that the states $|0\rangle$ and $|1\rangle$ are one of many possible choice
 A number of features of the quantum circuits, which differentiates it from the conventional circuits are:
 <ol>
   <li> Quantum circuits do not allow loops/ feedback.</li>
-  <li> They do not allow FANIN - several wires being joined together and an bitwise _OR_ of the inputs being shown as output.</li>
+  <li> They do not allow FANIN - several wires being joined together and an bitwise OR of the inputs being shown as output.</li>
   <li> They do not allow FANOUT - several copies of a qubit being produced.</li>
 </ol>
 
