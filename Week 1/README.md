@@ -15,7 +15,7 @@ and can be represented on a sphere as shown (Bloch Sphere):
 ## Multiple Qubits
 Let us consider the case of two Qubits. The system can be expressed as a superposition (linear combination) of 4 _computational basis states_ (in simple words 4 different possibilities that the system can "collapse" into) - $|00\rangle, |01\rangle, |10\rangle, |11\rangle$ ). An important two-qubit state is a Bell State or EPR state:
 
-$$ \frac{|00\rangle + |11\rangle}{2}$$
+$$ \frac{|00\rangle + |11\rangle}{\sqrt2}$$
 
 It has the property that upon measuring the value of the first qubit (which can be either 0 or 1 with the probability $\frac{1}{2}$ for each outcome), the outcome of the second qubit is already determined. A strong correlation exists in a Bell state than could ever exist in a classical system.
 
@@ -101,13 +101,33 @@ has three input bits and three output bits - two bits are _control_ bits and one
 The rule for the Toffoli gate is: The third bit is a target bit that is ﬂipped if both control bits are set to 1, and otherwise is left alone. The toffoli gate can be used to simulate both the NAND gate and the NOT gate - and therefore, all the classical gates. 
 
 ### Quantum Parallelism 
-Heuristically, and at the risk of over-simplifying, quantum parallelism allows quantum computers to evaluate a function $f(x)$ for many different values of x simultaneously. Suppose $f(x): \{ 0, 1 \} \rightarrow \{ 0, 1 \}$ is a function with a one-bit domain and range. With an appropriate sequence of logic gates it is possible to transform this state into $|x, y \oplus f(x)\rangle$. Let $|x\rangle$ be $\frac{|0\rangle + |1\rangle}{2}$ and y be $|0\rangle$, the state in the second qubit will be:
+Heuristically, and at the risk of over-simplifying, quantum parallelism allows quantum computers to evaluate a function $f(x)$ for many different values of x simultaneously. Suppose $f(x): \{ 0, 1 \} \rightarrow \{ 0, 1 \}$ is a function with a one-bit domain and range. With an appropriate sequence of logic gates it is possible to transform this state into $|x, y \oplus f(x)\rangle$. Let $|x\rangle$ be $\frac{|0\rangle + |1\rangle}{\sqrt2}$ and y be $|0\rangle$, the state in the second qubit will be:
 
-$$ \frac{|0,f(0)\rangle + |1,f(1)\rangle}{2}$$
+$$ \frac{|0,f(0)\rangle + |1,f(1)\rangle}{\sqrt2}$$
 
 Which means, we have information about $f(0) and f(1) $ in a single circuit, unlike in the case of classical circuit, where multiple circuits each built to compute $f(x)$ are executed simultaneously.
 
 ### Deutsch's Algorithm
+<img src = "https://user-images.githubusercontent.com/95964330/181414495-0d7f1974-3069-478a-9000-0fd3968802ee.png" width = 400>
+
+$$ |\psi_1\rangle = \[ \frac{|0\rangle + |1\rangle}{\sqrt2} \] \[ \frac{|0\rangle - |1\rangle}{\sqrt2} \]$$
+
+$$ |\psi_2\rangle = \pm \[ \frac{|0\rangle + |1\rangle}{\sqrt2} \] \[ \frac{|0\rangle - |1\rangle}{\sqrt2} \]$$
+
+if $f(0) = f(1)$
+
+$$ |\psi_2\rangle = \pm \[ \frac{|0\rangle - |1\rangle}{\sqrt2} \] \[ \frac{|0\rangle - |1\rangle}{\sqrt2} \]$$
+
+if $f(0) = f(1)$
+
+On applying Hadamard gate to first qubit,
+
+$$ |\psi_3\rangle = |f(0) \oplus f(1)\rangle \[ \frac{|0\rangle - |1\rangle}{\sqrt2} \]$$
+
+On measuring, we get the value of $f(0) \oplus f(1)$ with unity probability.
+
+> This is very interesting indeed: the quantum circuit has given us the ability to determine a global property of f(x), namely , using only one evaluation of f(x)! This is faster than is possible with a classical apparatus, which would require at least two evaluations.
+
 
 ### The Deutsch-Jozsa Algorithm 
 
